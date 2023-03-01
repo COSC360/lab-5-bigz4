@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+table {
+    border-spacing: 0.3rem;
+    text-align: center;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(68, 67, 67);
+}
+
+
+caption {
+    background-color: rgb(97, 159, 139);
+    padding: 0.5rem;
+}
+
+th, td {
+    padding: 0.5rem;
+    background-color: rgb(240, 237, 237);
+}
+
+th {
+    font-size: 1em;
+    height: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.1em solid rgb(177, 175, 175);
+}
+
+td {
+    font-size: 1rem;
+    border-bottom: 0.1em solid rgb(177, 175, 175);
+    border-right: 0.1em solid rgb(177, 175, 175);
+}
+
+#today {
+    color: white;
+    background-color: rgb(78, 182, 189);
+    border: 0.15em solid rgb(37, 145, 148);
+}
+
+
+tbody td:hover, #today:hover {
+    background-color: red;
+}
+
+tbody tr:last-child td:last-child:hover {
+    background-color: rgb(240, 237, 237);
+}
+
+tfoot td {
+    border: 0;
+}
+
+.prev {
+    text-align: right;
+}
+
+a:link {
+    color: rgb(57, 134, 134);
+}
+
+tfoot a:link {
+    color: rgb(110, 110, 110);
+    font-size: 0.8rem;
+}
+
+tfoot > tr > td:first-child {
+    text-align: left;
+}
+
+tfoot > tr > td:last-child {
+    text-align: right;
+}
+
+form {
+    background-color: rgb(220, 199, 127);
+    padding: 0.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+fieldset > div:not(:last-child) {
+    padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+legend {
+    margin-bottom: 0.3rem;
+}
+
+
+fieldset > div:nth-last-child(3) > input {
+    margin: 0;
+}
+
+fieldset > div:last-child {
+    margin-top: 0.8rem;
+}
+
+fieldset > div:last-child > input {
+    border-radius: 0.3em;
+    border: 0.1em solid gray;
+    font-size: 0.8rem;
+}

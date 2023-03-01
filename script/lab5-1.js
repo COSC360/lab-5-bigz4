@@ -1,27 +1,31 @@
-window.addEventListener('load', (event) => {
+window.onload = function() {
 
-    // var theNewScript = document.createElement("script");
-    // theNewScript.type = "text/javascript";
-    // theNewScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js";
-    // document.getElementsByTagName("head")[0].appendChild(theNewScript);
-
-    // var waitForLoad = function () {
-    //     if (typeof jQuery == "undefined") {
-    //         window.setTimeout(waitForLoad, 1000);
-    //     }
-    // };
-    // window.setTimeout(waitForLoad, 1000);
-    console.log("got here");
-    var required = document.querySelectorAll("textarea");
+    //console.log("got here");
+    var required = document.querySelectorAll(".required");
     
-
     for(var i=0; i<required.length; i++){
-        console.log("got here" + i);
+        //console.log("got here" + i);
         required[i].addEventListener("change", function(e){
-            //$("required").removeClass("required")
-            console.log("got here yo");
-            element = document.styleSheets[2].cssRules[0].style;
-            element.removeProperty('background-color');
+            //console.log("got here yo" + i);
+
+            if(this.value!="" || this.checked){
+                this.style.backgroundColor="#FFFFFF";
+            }else{
+                this.style.backgroundColor="#FF0000"; 
+            }
+            
         });
+
+        required[i].addEventListener
     };
-});
+
+    document.getElementById("mainForm").onsubmit = function(e){
+        alert("fill in required fields");
+        for( var i=0; i<required.length; i++){
+            if(required[i].value=="" || required[i].checked){
+                //console.log("no submit for you! >:)");
+                e.preventDefault();
+            }
+        }
+    };
+};
